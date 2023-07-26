@@ -11,6 +11,7 @@ int main(void)
 {
     int len;
     int len2;
+    int num1, num2;
     unsigned int ui;
     void *addr;
 
@@ -38,7 +39,46 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
+
+    num1 = _printf("A %s sentence\n", "simple");
+    num2 = printf("A %s sentence\n", "simple");
+    printf("Len:[%d]\n", num1);
+    printf("Len1:[%d]\n\n", num2);
+    
+    num1 = _printf("A %c%c%s sentence\n", 's', 'i', "mple");
+    num2 = printf("A %c%c%s sentence\n", 's', 'i', "mple");
+    printf("Len:[%d]\n", num1);
+    printf("Len1:[%d]\n\n", num2);
+
+    num1 = _printf("A simple %v entence\n");
+    num2 = printf("A simple %v entence\n");
+    printf("Len:[%d]\n", num1);
+    printf("Len1:[%d]\n\n", num2);
+
+    num1 = _printf("Percentage: %%\n");
+    num2 = printf("Percentage: %%\n");
+    printf("Len:[%d]\n", num1);
+    printf("Len1:[%d]\n\n", num2);
+
+    num1 = _printf("Hello %\n");
+    num2 = printf("Hello %\n");
+
+    printf("%d || %d\n", num1,num2);
+    _printf("Hello %  \n");
+    printf("Hello %  \n");
+    printf("%d || %d\n", num1,num2);
+
+    len = _printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
+	len2 = printf("%c%cth %s%s a%cg%s: Y%sou %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
+    
+    num1 = _printf("%%");
+    num2 = printf("%%");
+
+    num1 = _printf("%c",'\0');
+    num2 = _printf("%");
+    num1 = _printf("%!\n");
+    num2 = _printf(NULL);
+    num1 = _printf("%s",NULL);
+
     return (0);
 }
