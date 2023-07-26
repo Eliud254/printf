@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-            char_count += select(*format, args);
+			char_count += select(*format, args);
 		}
 		else
 		{
