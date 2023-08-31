@@ -1,14 +1,60 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <unistd.h>
-#include <stdarg.h>
+/*** HEADER FILES ****/
+
 #include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <limits>
 
-#define BUFFER_SIZE 1024
 
-void append_to_buffer(char *buffer, char c, int *index);
+/*** STRUCT FORMAT ***/
+
+typedef struct format
+{
+    char *home;
+    int (*f)();
+} Specifiers;
+
+/*** PROTOTYPE FUNCTIONS ***/
+
+/*** TASK 0 ***/
 int _printf(const char *format, ...);
+int _putchar(char c);
+int printf_char(va_list val);
 
-#endif /* MAIN_H */
+/*** TASK 1  */
 
+int printf_deceimal(va_list args);
+int printf_int(va_list args);
+
+/*** TASK 2  */
+
+/*** TASK 3  */
+
+/*** TASK 4  */
+
+/*** TASK 5  */
+
+/*** TASK 6  */
+
+/*** TASK 7  */
+
+/*** TASK 8  */
+
+/*** TASK 9  */
+
+/*** TASK 10 */
+
+/*** TASK 11 */
+
+/*** TASK 12 */
+
+/*** TASK 13 */
+
+/*** TASK 14 */
+
+#endif
