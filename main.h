@@ -1,60 +1,37 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/*** HEADER FILES ****/
-
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
-#include <limits>
+#include <stdarg.h>
+#include <stdio.h>
 
 
-/*** STRUCT FORMAT ***/
-
-typedef struct format
-{
-    char *home;
-    int (*f)();
-} Specifiers;
-
-/*** PROTOTYPE FUNCTIONS ***/
-
-/*** TASK 0 ***/
-int _printf(const char *format, ...);
+/* Function prototypes */
 int _putchar(char c);
-int printf_char(va_list val);
-
-/*** TASK 1  */
-
-int printf_deceimal(va_list args);
+int _printf(const char *format, ...);
+int printf_percent(void);
+int printf_char(va_list args);
+int printf_string(va_list args);
 int printf_int(va_list args);
+int printf_unsigned(va_list args);
+int printf_oct(va_list args);
+int printf_hex(va_list args);
+int printf_HEX(va_list args);
+int printf_pointer(va_list args);
+void print_buffer(char buffer[], int *buff_ind);
+int handle_print(const char *format, int *i, va_list args,
+char buffer[], int flags, int width, int precision, int size);
+int get_flags(const char *format, int *i);
+int get_width(const char *format, int *i, va_list args);
+int get_precision(const char *format, int *i, va_list args);
+int get_size(const char *format, int *i);
+int _putchar(char c);
+int _printf(const char *format, ...);
 
-/*** TASK 2  */
+/********************second try**************/
 
-/*** TASK 3  */
+int select(char c, va_list args);
 
-/*** TASK 4  */
 
-/*** TASK 5  */
+#endif /* MAIN_H */
 
-/*** TASK 6  */
-
-/*** TASK 7  */
-
-/*** TASK 8  */
-
-/*** TASK 9  */
-
-/*** TASK 10 */
-
-/*** TASK 11 */
-
-/*** TASK 12 */
-
-/*** TASK 13 */
-
-/*** TASK 14 */
-
-#endif
