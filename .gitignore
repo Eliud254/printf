@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 ./output
 ./a.out
+=======
+main.c
+a.out
+./output
+>>>>>>> f4eff8b5f27cc9141b168b2fddb3d9f8b7c96bc0
